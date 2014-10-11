@@ -1,0 +1,153 @@
+/* Большая фотография на главной странице------------------------------------------------------------- */
+.content figure:first-child img {
+	width: 100%;
+	margin: 20px 0 20px 0;
+}
+/* Маленькие фотки снизу ---------------------------------------------------------*/
+.content figure:nth-child(2) img:first-child{
+	width: 32%;
+	float: left;
+}
+.content figure:nth-child(2) img:nth-child(2) {
+	width: 32%;
+	margin: 0 21px;
+}
+.content figure:nth-child(2) img:last-child{
+	width: 32%;
+	float: right;
+}
+/* Исправляет баги с плавающей разметкой -------------------------------------------------------*/
+.content figure:nth-child(2):before,
+.content figure:nth-child(2):after,
+.products_types:after,
+.products_types:before {
+	content: "";
+	display: table;
+}
+.content figure:nth-child(2):after {
+	clear: both;
+}
+/* текст: Вся обувь, Бренды, Новости ------------------------------------------------------------ */
+.text_in_center{
+	margin: 10px 0;
+}
+.text_in_center p {
+	font-size: 30px;
+	display: block;
+	position: relative;
+	top: 15px;
+	background-color: rgb(255, 255, 255);
+	width: 200px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.text_in_center hr {
+	color: rgb(227, 227, 227);
+	size: 2px;
+	margin-bottom: 35px;
+}
+.text_in_center:after {
+	clear: both;
+}
+
+/* Виды обуви, картинки--------------------------------------------------------------- */
+.products_types {
+	background-color: rgb(240, 240, 240);
+	height: auto;
+	padding: 20px 0;
+}
+.products_types figure {
+	background: url(ico/intop.png);
+	background-color: rgb(255, 255, 255);
+	width: 220px;
+	height: 300px;
+	float: left;
+	margin: 20px;
+}
+.products_types figure figcaption{
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	position: relative;
+	top: 30px;
+	background-color: rgb(255, 255, 255);
+	z-index: 333;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	width: 80px;
+}
+.products_types figure hr {
+	width: 170px;
+	position: relative;
+	top: 15px;
+	color: rgb(227, 227, 227);
+}
+.products_types figure img {
+	width: 70%;
+	margin: 10px 20px;
+}
+.products_types:after {
+	clear: both;
+	content: "";
+}
+
+
+/* Список брендов внизу страницы--------------------------------------------------------------------- */
+.brands article img {
+	display: inline-block;
+	width: 13%;
+	float: left;
+	margin: 0 18px;
+}
+.brands  {
+	margin-bottom: 220px;
+	position: relative;
+	clear: both;
+}
+.brands p {
+	font-size: 30px;
+}
+
+/* Лента новостей -------------------------------------------------------------------------------*/
+.news_list {
+	padding-right: 15px;
+	margin-bottom: 20px;
+}
+.news_list img {
+	float: left;
+	height: 210px;
+	margin-right: 25px;
+}
+.news_list h2 {
+	font-size: 30px;
+	margin: 25px 5px;
+	color: rgb(66, 66, 66);
+}
+.news_list p {
+	font-size: 16px;
+	text-align: justify;
+	color: rgb(66, 66, 66);
+}
+.news_list time {
+	font-size: 14px;
+	float: right;
+	margin: 25px 5px 0 0;
+	color: rgb(150, 150, 150);
+}
+.news_list a {
+	color: rgb(197,109,102);
+}
+.news_list hr {
+	color: rgb(227, 227, 227);
+	margin-top: 10px;
+}
+.news_list:after,
+.news_list:before {
+	content: "";
+	display: table;
+}
+.news_list:after {
+	clear: both;
+}
+

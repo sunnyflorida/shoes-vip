@@ -3,6 +3,28 @@
 }
 .where_to_buy figure {
 	float: left;
-	width: 45%;
+	width: 480px;
 	margin: 30px 10px;
+	border: 1px solid rgb(239,239,239);
+	padding: 0 0 20px 0;
+}
+.where_to_buy figure img {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.where_to_buy figure figcaption {
+	text-align: center;
+	font-family: inherit;
+	font-size: 14px;
+}
+.where_to_buy figure figcaption p:first-child {
+	font-size: 18px;
+}
+.where_to_buy figure figcaption p:last-child {
+	color: rgb(175,21,0);
+	text-decoration: underline;
+}
+.where_to_buy hr {
+	width: 250px;
+	color: rgb(227,227,227);
 }
