@@ -1,0 +1,8 @@
+.where_to_buy {
+	height: auto;
+}
+.where_to_buy figure {
+	float: left;
+	width: 45%;
+	margin: 30px 10px;
+}
