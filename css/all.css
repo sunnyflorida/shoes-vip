@@ -33,7 +33,7 @@ body {
 	background: rgb(238, 238, 238);
 }
 .header .center div:first-child {
-	width: auto;
+	width: 400px;
 	height: 50px;
 	float: left;
 }
