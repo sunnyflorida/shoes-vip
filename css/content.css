@@ -8,25 +8,59 @@
 	width: 33%;
 	float: left;
 	padding: 5px;
+	margin-bottom: -50px;
 }
 .small_photo figure img {
 	width: 100%;
 }
 .small_photo figure figcaption {
 	position: relative;
+	padding: 0 20px;
+	vertical-align: middle;
+	padding-top: 15px;
+	
+}
+.small_photo figure figcaption a {
+	color: rgb(255, 255, 255);
+	font-size: 17px;
 }
 .small_photo figure:nth-child(1) figcaption {
-	background-color: rgba(203, 84, 86, 0.8);
-	width: 130px;
-	top: 50px;
+	background-color: rgba(203, 84, 86, 0.9);
+	width: auto;
+	height: 48px;
+	bottom: 100px;
+	float: right;
+	margin-right: 20px;
+	border: 1px solid rgb(255, 255, 255); 
+	outline: 1px solid rgba(203, 84, 86, 0.9); 
 }
 .small_photo figure:nth-child(2) figcaption {
 	background-color: rgba(81, 57, 40, 0.8);
-	width: 130px;
+	width: 120px;
+	height: 48px;
+	bottom: 100px;
+	margin: 0 auto;
+	padding-left: 25px;
+	border: 1px solid rgb(255, 255, 255); 
+	outline: 1px solid rgba(81, 57, 40, 0.8); 
 }
 .small_photo figure:nth-child(3) figcaption {
 	background-color: rgba(203, 84, 86, 0.8);
-	width: 70px;
+	width: auto;
+	height: 48px;
+	bottom: 100px;
+	float: left;
+	margin-left: 20px;
+	border: 1px solid rgb(255, 255, 255); 
+	outline: 1px solid rgba(203, 84, 86, 0.9); 
+}
+.small_photo:after,
+.small_photo:before {
+	content: "";
+	display: table;
+}
+.small_photo:after {
+	clear: both;
 }
 
 
@@ -38,9 +72,10 @@
 	font-size: 30px;
 	display: block;
 	position: relative;
-	top: 15px;
+	top: 25px;
 	background-color: rgb(255, 255, 255);
 	width: 200px;
+	height: 30px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -54,14 +89,14 @@
 	clear: both;
 }
 
-/* Виды обуви, картинки--------------------------------------------------------------- */
+/* Виды обуви, картинки на главной странице--------------------------------------------------------------- */
 .products_types {
 	background-color: rgb(240, 240, 240);
 	height: auto;
 	padding: 20px 0;
 }
 .products_types figure {
-	background: url(ico/intop.png);
+	background: url(../ico/intop.png) top center no-repeat;
 	background-color: rgb(255, 255, 255);
 	width: 220px;
 	height: 300px;
@@ -88,7 +123,8 @@
 }
 .products_types figure img {
 	width: 70%;
-	margin: 10px 20px;
+	display: block;
+	margin: 10px auto;
 }
 .products_types:after {
 	clear: both;
@@ -109,13 +145,22 @@
 	margin: 0 18px;
 }
 .brands  {
-	margin-bottom: 220px;
+	margin-bottom: 20px;
 	position: relative;
 	clear: both;
 }
 .brands p {
 	font-size: 30px;
 }
+.brands:after,
+.brands:before {
+	content: "";
+	display: table;
+}
+.brands:after {
+	clear: both;
+}
+
 
 /* Лента новостей -------------------------------------------------------------------------------*/
 .news_list {
@@ -185,15 +230,16 @@
 	display: block;
 	float: left;
 	clear: both;
-	font-size: 18px;
 	color: rgb(0, 0, 0);
 	margin: 10px 0;
+	font: 16px Calibri, Arial, sans-serif;
 }
-.separate_news > p:first-child{
-	background-color: rgb(0, 248, 248);
-	border: 1px solid black;
+.news .separate_news .border_paragraph {
+	background-color: rgb(248, 248, 248);
+	border: 1px solid rgb(239, 239, 239);
+	font-size: 18px;
+	padding: 20px;
 }
-
 
 .separate_news:after,
 .separate_news:before {
@@ -230,4 +276,90 @@
 	color: rgb(47, 47, 47);
 	margin: 20px 0;
 }
+.brand_description article:last-child strong {
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+
+/* Страница "Где купить" -------------------------------------------------------------------------------*/
+
+.where_to_buy {
+	height: auto;
+}
+.where_to_buy figure {
+	float: left;
+	width: 480px;
+	margin: 30px 10px;
+	border: 1px solid rgb(239,239,239);
+	padding: 0 0 20px 0;
+}
+.where_to_buy figure img {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.where_to_buy figure figcaption {
+	text-align: center;
+	font-family: inherit;
+	font-size: 14px;
+}
+.where_to_buy figure figcaption p:first-child {
+	font-size: 18px;
+}
+.where_to_buy figure figcaption p:last-child {
+	color: rgb(175,21,0);
+	text-decoration: underline;
+}
+.where_to_buy hr {
+	width: 250px;
+	color: rgb(227,227,227);
+}
+
+/* Каталог товаров-------------------------------------------------------------------------------*/
+
+.kat section aside {
+	width: 25%;
+	float: left;
+	background-color: red;
+	min-height: 100%;
+}
+.catalog {
+	padding-left: 27%;
+	background-color: #eee;	
+	min-height: 100%;
+}
+.catalog figure {
+	width: 220px;
+	height: 300px;
+	float: left;
+	margin: 20px;
+}
+.catalog figure:hover {
+	box-shadow: 0 0 10px 1px rgb(188,188,188);
+}
+.catalog figure img {
+	display: block;
+	margin: 0 auto;
+	width: 70%;
+}
+.catalog figure figcaption {
+	text-align: center;
+	font-size: 16px;
+}
+.catalog figure figcaption p:last-child {
+	display: inline-block;
+	background-color: rgb(240,240,240);
+	font-size: 18px;
+	padding: 5px 20px;
+	border-radius: 15px;
+	margin-top: 5px;
+}
+
+/* Какое-то подобие фильтра по размерам-------------------------------------------------------------------------------*/
+.kat section aside button{
+	display: block;
+}
+
+
 

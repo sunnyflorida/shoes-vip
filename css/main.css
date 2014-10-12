@@ -1,4 +1,67 @@
 @import url(reset.css);
 @import url(all.css);
 @import url(content.css);
-@import url(buy.css);
+/*.footer {
+	margin: -90px auto 0;
+	height: 90px;
+	position: relative;
+	width: 100%;
+	background-color: rgb(56, 56, 56);
+	
+}
+.footer nav:first-child {
+	background-color: rgb(26, 26, 26);
+	height: 40px;
+	margin-top: 10px;
+	float: left;
+}
+.footer nav:last-child {
+	margin-top: 60px;
+	height: 20px;
+}
+
+.footer nav  ul {
+	list-style-type: none;
+}
+
+.footer nav:first-child   li {
+	display: inline-block;
+	float: left;
+	height: 50px;
+	font-size: 14px;
+	padding: 10px 15px 0 15px;
+}
+.footer nav:last-child   li {
+	display: inline-block;
+	float: left;
+	height: 20px;
+	font-size: 12px;
+	padding: 0 15px;
+	border-right: 1px solid rgb(137, 137, 137);
+}
+.footer nav:first-child   a {
+	color: rgb(197, 197, 197);
+}
+.footer nav:last-child   a {
+	color: rgb(137, 137, 137);
+	text-decoration: underline;
+}
+.footer_wrapper {
+	float: left;
+	width: auto;
+}
+.footer > div:last-child {
+	height: 90px;
+	float: right;
+
+}
+.footer div:last-child p {
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+	float: left;
+	margin: 25px 10px 0 0;
+}
+.footer div:last-child img {
+	margin: 30px 0 0 0;
+}
+*/
