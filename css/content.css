@@ -15,10 +15,7 @@
 }
 .small_photo figure figcaption {
 	position: relative;
-	padding: 0 20px;
-	vertical-align: middle;
-	padding-top: 15px;
-	
+	padding: 15px 20px 0 20px;
 }
 .small_photo figure figcaption a {
 	color: rgb(255, 255, 255);
@@ -27,6 +24,7 @@
 .small_photo figure:nth-child(1) figcaption {
 	background-color: rgba(203, 84, 86, 0.9);
 	width: auto;
+	max-width: 120px;
 	height: 48px;
 	bottom: 100px;
 	float: right;
@@ -36,7 +34,8 @@
 }
 .small_photo figure:nth-child(2) figcaption {
 	background-color: rgba(81, 57, 40, 0.8);
-	width: 120px;
+	width: auto;
+	max-width: 120px;
 	height: 48px;
 	bottom: 100px;
 	margin: 0 auto;
@@ -47,6 +46,7 @@
 .small_photo figure:nth-child(3) figcaption {
 	background-color: rgba(203, 84, 86, 0.8);
 	width: auto;
+	max-width: 180px;
 	height: 48px;
 	bottom: 100px;
 	float: left;
@@ -62,7 +62,11 @@
 .small_photo:after {
 	clear: both;
 }
-
+.small_photo figure:nth-child(1) figcaption:hover,
+.small_photo figure:nth-child(2) figcaption:hover,
+.small_photo figure:nth-child(3) figcaption:hover {
+	box-shadow: 0 0 5px 3px rgb(100,100,100);
+}
 
 /* текст: Вся обувь, Бренды, Новости ------------------------------------------------------------ */
 .text_in_center{
@@ -102,6 +106,9 @@
 	height: 300px;
 	float: left;
 	margin: 20px;
+}
+.products_types .center figure:hover{
+	box-shadow: 0 0 10px 1px rgb(188,188,188);
 }
 .products_types figure figcaption{
 	color: rgb(0, 0, 0);
@@ -210,7 +217,7 @@
 	margin: 40px 0;
 }
 .separate_news img{
-	float: left;
+	float: none;
 	clear: right;
 }
 .separate_news h2 {
@@ -323,10 +330,10 @@
 	float: left;
 	background-color: red;
 	min-height: 100%;
+	margin-top: 20px;
 }
 .catalog {
 	padding-left: 27%;
-	background-color: #eee;	
 	min-height: 100%;
 }
 .catalog figure {
@@ -356,10 +363,7 @@
 	margin-top: 5px;
 }
 
-/* Какое-то подобие фильтра по размерам-------------------------------------------------------------------------------*/
-.kat section aside button{
-	display: block;
-}
+
 
 
 

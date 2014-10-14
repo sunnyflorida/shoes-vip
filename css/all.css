@@ -13,7 +13,7 @@ body {
 }
 
 .wrapper {
-	min-width: 700px;
+	min-width: 360px;
 	max-width: 100%;
 	min-height: 100%;
 	height: auto !important;
@@ -21,7 +21,7 @@ body {
 	padding: 0 0 20px;
 }
 .center {
-	min-width: 600px;
+	min-width: 360px;
 	max-width: 1100px;
 	margin: 0 auto;
 }
@@ -33,18 +33,22 @@ body {
 	background: rgb(238, 238, 238);
 }
 .header .center div:first-child {
-	width: 400px;
+	max-width: 400px;
 	height: 50px;
 	float: left;
+	display: block;
 }
 .header .center div:first-child p {
 	color: rgb(118, 118, 118);
 	float: left;
-	padding-top: 25px;
 	font-family: Calibri;
 	font-size: 16px;
 	display: inline-block;
-	height: 50px;
+	height: 30px;
+	border-left: 1px solid rgb(118, 118, 118);
+	padding-left: 5px;
+	padding-top: 10px;
+	margin-top: 15px;
 }
 .header .center div:first-child img {
 	height: 50px;
@@ -55,6 +59,7 @@ body {
 	height: 50px;
 	width: 300px;
 	float: right;
+	display: block;
 }
 
 .header .center div:last-child p {
@@ -72,6 +77,7 @@ body {
 	float: right;
 	margin: 15px 0 0 0;
 }
+
 
 /* Navigation
 -----------------------------------------------------------------------------*/
@@ -106,7 +112,14 @@ body {
 .wrapper > nav .nav_things {
 	background-color: rgb(18, 171, 43);
 }
-
+.wrapper .nav_main:hover,
+.wrapper .nav_kat:hover,
+.wrapper .nav_buy:hover,
+.wrapper .nav_about:hover,
+.wrapper .nav_news:hover,
+.wrapper .nav_things:hover {
+	border-bottom: 3px solid rgb(18, 171, 43);
+}
 
 
 
@@ -114,31 +127,25 @@ body {
 -----------------------------------------------------------------------------*/
 .footer {
 	background-color: rgb(56, 56, 56);
-	padding: 20px 0;
-	height: 110px;
+	min-height: 90px;
 }
 .footer_wrapper {
-	width: 47%;
-	height: 90px;
 	float: left;
+	min-height: 90px;
 }
-
 .footer_wrapper aside {
 	display: block;
+}
+.footer_wrapper aside ul li{
+	display: inline-block;
+	float: left;
 }
 .footer_wrapper aside:first-child {
 	background-color: rgb(26, 26, 26);
 	height: 40px;
 	margin-bottom: 20px;
 }
-.footer_wrapper aside:first-child ul,
-.footer_wrapper aside:last-child ul  {
-	float: right;
-}
-.footer_wrapper aside ul li{
-	display: inline-block;
-	float: left;
-}
+
 .footer_wrapper aside:first-child a {
 	color: rgb(197, 197, 197);
 	font-size: 14px;
@@ -150,26 +157,30 @@ body {
 	color: rgb(137, 137, 137);
 	text-decoration: underline;
 	padding: 0 10px 0 10px;
-	border-right: 1px solid rgb(137, 137, 137);
+	border-left: 1px solid rgb(137, 137, 137);
 }
-
-.footer_num {
-	width: 30%;	
+.footer .footer_wrapper aside:last-child ul li:first-child a {
+	border-left: none;
+}
+.fb {
 	float: right;
+	width: 40px;
+	padding-top: 30px;
 	height: 90px;
+}
+.footer_num {
+	width: 150px;	
+	float: right;
+	padding-top: 35px;
+	height: 90px;
+	margin-right: 5%;
 }
 .footer_num p {
 	color: rgb(238, 238, 238);
 	font-size: 16px;
 	display: inline-block;
-	height: 90px;
-	padding: 30px 10px 0 0;
 }
-.footer_num img:last-child {
-	position: relative;
-	top: 5px;
-	left: 60px;
-}
+
 
 
 /* Навигация в футере
@@ -184,7 +195,19 @@ body {
 	color: rgb(211,46,46);
 }
 
-
+.footer_wrapper .nav_main a:hover,
+.footer_wrapper .nav_kat a:hover,
+.footer_wrapper .nav_buy a:hover,
+.footer_wrapper .nav_about a:hover,
+.footer_wrapper .nav_news a:hover,
+.footer_wrapper .nav_things a:hover,
+.footer_wrapper .nav_bonus a:hover,
+.footer_wrapper .nav_guarantee a:hover,
+.footer_wrapper .nav_back a:hover,
+.footer_wrapper .nav_about_comp a:hover,
+.footer_wrapper .nav_brands a:hover{
+	color: rgb(211,46,46);
+}
 
 
 
