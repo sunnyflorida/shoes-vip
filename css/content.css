@@ -1,7 +1,8 @@
 /* Большая фотография на главной странице------------------------------------------------------------- */
-.content article:first-child img {
+.content article:first-child .item img {
+	margin: 20px auto;
 	width: 100%;
-	margin: 20px 0 20px 0;
+	
 }
 /* Маленькие фотки снизу ---------------------------------------------------------*/
 .small_photo figure {
@@ -35,7 +36,7 @@
 .small_photo figure:nth-child(2) figcaption {
 	background-color: rgba(81, 57, 40, 0.8);
 	width: auto;
-	max-width: 120px;
+	max-width: 150px;
 	height: 48px;
 	bottom: 100px;
 	margin: 0 auto;
@@ -68,6 +69,8 @@
 	box-shadow: 0 0 5px 3px rgb(100,100,100);
 }
 
+	
+
 /* текст: Вся обувь, Бренды, Новости ------------------------------------------------------------ */
 .text_in_center{
 	margin: 10px 0;
@@ -76,12 +79,15 @@
 	font-size: 30px;
 	display: block;
 	position: relative;
-	top: 25px;
+	top: 40px;
 	background-color: rgb(255, 255, 255);
 	width: 200px;
 	height: 30px;
 	margin: 0 auto;
 	text-align: center;
+}
+.text_in_center p:hover {
+	text-shadow: 2px 2px 2px #999;
 }
 
 .text_in_center hr {
@@ -179,10 +185,17 @@
 	height: 210px;
 	margin-right: 25px;
 }
+.news_list img:hover {
+	box-shadow: 0 0 10px 1px rgb(188,188,188);
+}
 .news_list h2 {
 	font-size: 30px;
 	margin: 25px 5px;
 	color: rgb(66, 66, 66);
+}
+.news .wrapper .center .news_list h2:hover {
+	text-decoration: none;
+	color: rgb(197,109,102);
 }
 .news_list p {
 	font-size: 16px;
@@ -302,6 +315,9 @@
 	border: 1px solid rgb(239,239,239);
 	padding: 0 0 20px 0;
 }
+.where_to_buy figure:hover {
+	box-shadow: 0 0 10px 1px rgb(188,188,188);
+}
 .where_to_buy figure img {
 	width: 100%;
 	margin-bottom: 10px;
@@ -311,10 +327,10 @@
 	font-family: inherit;
 	font-size: 14px;
 }
-.where_to_buy figure figcaption p:first-child {
+.where_to_buy figure figcaption p:first-child a {
 	font-size: 18px;
 }
-.where_to_buy figure figcaption p:last-child {
+.where_to_buy figure figcaption p:last-child  a{
 	color: rgb(175,21,0);
 	text-decoration: underline;
 }
@@ -322,13 +338,18 @@
 	width: 250px;
 	color: rgb(227,227,227);
 }
-
+		@media screen and (max-width: 1020px) {
+			.buy .wrapper figure { 
+				float: none;
+				margin: 5px auto;
+			}
+		}
 /* Каталог товаров-------------------------------------------------------------------------------*/
 
 .kat section aside {
 	width: 25%;
 	float: left;
-	background-color: red;
+	background-color: #999;
 	min-height: 100%;
 	margin-top: 20px;
 }

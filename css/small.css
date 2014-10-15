@@ -1,12 +1,11 @@
 /* HEADER ---------------------------------------------------------------------------------*/
 .header .center div:first-child {
 	float: none;
-	width: 95%;
+	width: 90%;
 	margin: 0 auto;
 }
 .header .center div:last-child {
-	width: 70%;
-	min-width: 300px;
+	width: 90%;
 	float: none;
 	margin: 0 auto;
 }
@@ -20,15 +19,17 @@
 }
 
 /* NAVIGATION ----------------------------------------------------------------------------------*/
+/*
 .wrapper > nav {
 	margin-top: 50px;
 	height: 100px;
 	margin-bottom: 20px;
 	background-color: rgb(85, 85, 85);
 }
-
+*/
 /* Убирает слайдер ------------------------------------------------------------------------------*/
-.content article:first-child img {
+.content article:first-child img,
+.carousel {
 	display: none;
 }
 /* Но оставляет картинку на странице с акциями, у которой тот же класс*/
@@ -40,25 +41,25 @@
 
 /* Маленькие фотки снизу слайдера ---------------------------------------------------------*/
 .small_photo figure figcaption a {
-	font-size: 14px;
-	
+	font-size: 14px;	
 }
 .small_photo figure {
 	width: 70%;
 	float: none;
 	padding: 5px;
 	margin: 5px auto;
+	margin-bottom: -40px;
 }
 .small_photo figure figcaption {
 	position: relative;
-	padding: 10px 15px 0 15px;
-	
+	display: block;		
 }
 .small_photo figure:nth-child(1) figcaption,
 .small_photo figure:nth-child(2) figcaption,
 .small_photo figure:nth-child(3) figcaption {
 	margin: 0 auto;
 	float: none;
+	width: 200px;
 }
 
 /* Виды обуви, картинки на главной странице--------------------------------------------------------------- */
@@ -105,7 +106,7 @@
 .kat section aside {
 	width: 100%;
 	float: none;
-	background-color: #555;
+	background-color: #999;
 }
 .catalog {
 	padding-left: 0;

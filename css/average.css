@@ -5,7 +5,7 @@
 	margin: 0 auto;
 }
 .header .center div:last-child {
-	max-width: 300px;
+	width: 400px;
 	min-width: 300px;	
 	float: none;
 	margin: 0 auto;
@@ -24,6 +24,7 @@
 }
 
 /* NAVIGATION ----------------------------------------------------------------------------------*/
+
 .wrapper > nav {
 	margin-top: 50px;
 }
@@ -38,6 +39,7 @@
 	float: none;
 	padding: 5px;
 	margin: 5px auto;
+	margin-bottom: -40px;
 }
 .small_photo figure figcaption {
 	position: relative;
@@ -49,6 +51,7 @@
 .small_photo figure:nth-child(3) figcaption {
 	margin: 0 auto;
 	float: none;
+	width: 200px;
 }
 
 
@@ -57,6 +60,7 @@
 .footer {
 	background-color: rgb(56, 56, 56);
 	min-height: 150px;
+	width: 100%;
 }
 
 .phone_number {
@@ -92,7 +96,7 @@
 .kat section aside {
 	width: 100%;
 	float: none;
-	background-color: #555;
+	background-color: #999;
 }
 .catalog {
 	padding-left: 0;
@@ -111,6 +115,7 @@
 	border: 1px solid rgb(239,239,239);
 	padding: 0 0 20px 0;
 }
+
 
 /* Отдельная новость -------------------------------------------------------------------------------*/
 

@@ -25,6 +25,10 @@ body {
 	max-width: 1100px;
 	margin: 0 auto;
 }
+.clear {
+	float: none;
+	clear: both;
+}
 
 /* Header
 -----------------------------------------------------------------------------*/
@@ -81,7 +85,7 @@ body {
 
 /* Navigation
 -----------------------------------------------------------------------------*/
-.wrapper > nav {
+/*.wrapper > nav {
 	height: 50px;
 	width: 100%;
 	background-color: rgb(85, 85, 85);
@@ -121,7 +125,96 @@ body {
 	border-bottom: 3px solid rgb(18, 171, 43);
 }
 
+*/
+/* Продвинутое меню --------------------------------------------------------------------*/
+.navbar {
+	width: 100%;
+	background-color: rgb(85, 85, 85);
+	border-radius: 0;
+	height: 50px;
+	box-sizing: padding-box;
+	border-bottom: 3px solid rgb(85, 85, 85);
+}
 
+.wrapper nav .navbar-collapse ul li {
+	padding: 0;
+	font: 16px Calibri, Arial, sans-serif;
+	text-transform: uppercase;
+	background-color: rgb(85, 85, 85);
+	color: rgb(230, 230, 230);
+}
+.dropdown {
+	color: rgb(230, 230, 230);
+}
+.wrapper nav .navbar-collapse ul li a{
+	color: rgb(230, 230, 230);
+
+}
+.main .wrapper .nav_main,
+.kat .wrapper .nav_kat,
+.buy .wrapper .nav_buy,
+.about .wrapper .nav_about,
+.discounts .wrapper .nav_about,
+.news .wrapper .nav_news,
+.new_things .wrapper .nav_things {
+	border-bottom: 3px solid rgb(255, 255, 255);
+	background-color: rgb(85, 85, 85);
+}
+.wrapper .nav_main:hover,
+.wrapper .nav_kat:hover,
+.wrapper .nav_buy:hover,
+.wrapper .nav_about:hover,
+.wrapper .nav_news:hover {
+	border-bottom: 3px solid rgb(18, 171, 43);
+	color: rgb(230, 230, 230);
+}
+
+.wrapper > nav .nav_things a{
+	background-color: rgb(18, 171, 43);
+	border-bottom: 3px solid rgb(18, 171, 43);
+}
+.navbar:after,
+.navbar:before,
+.navbar-nav:after,
+.navbar-nav:before  {
+	content: "";
+	display: table;
+}
+.navbar:after,
+.navbar-nav:after{
+	clear: both;
+}
+
+/*
+
+.wrapper nav,
+.container-fluid,
+.navbar-collapse,
+.collapse,
+.navbar,
+.navbar-default {
+	max-height: 40px;
+}
+.navbar-nav {
+	padding: 0;
+}
+.navbar-nav li {
+	height: 48px !important;
+}
+
+.dropdown {
+	height: 100%;
+}
+.dropdown .dropdown-toggle {
+	height: 48px !important;
+}
+
+
+
+
+
+
+*/
 
 /* Footer
 -----------------------------------------------------------------------------*/
