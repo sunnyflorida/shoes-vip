@@ -346,7 +346,7 @@
 		}
 /* Каталог товаров-------------------------------------------------------------------------------*/
 
-.kat section aside {
+.kat section aside:first-child {
 	width: 25%;
 	float: left;
 	background-color: #999;
@@ -359,11 +359,11 @@
 }
 .catalog figure {
 	width: 220px;
-	height: 300px;
+	height: 320px;
 	float: left;
 	margin: 20px;
 }
-.catalog figure:hover {
+.catalog .btn figure:hover {
 	box-shadow: 0 0 10px 1px rgb(188,188,188);
 }
 .catalog figure img {
@@ -384,7 +384,121 @@
 	margin-top: 5px;
 }
 
+/*Модальное окно-------------------------------------------------------------------------------------------------------*/
+.catalog > a,
+.catalog > a:visited {
+	border: none;
+}
+.modal-header{
+	width: 50%;
+	margin: 0 auto;
+	background-color: transparent;			
+}
+.modal-header button {
+	position: relative;
+	top: 20px;
+	z-index: 300;
+	left: 35px;
+	font-size: 16px;
+}
+.modal-body {
+	width: 60%;
+	height: 500px;
+	background-color: #fff;
+	margin: 0 auto;
+	border-radius: 30px;
+}
+.modal-body figure {
+	height: 300px;
+	width: 40%;
+	float: left;
+}
+.modal-body article {
+	height: 300px;
+	width: 50%;
+	float: right;
+}
+.modal-body article aside {
+	width: 100%;
+	margin-top: 10px;
+}
+.modal-body article aside:last-child span {
+	display: inline-block;
+	background-color: rgb(246, 246, 246);
+	width: 30px;
+	height: 30px;
+	font-size: 15.63px;
+	border: 1px solid rgb(207, 207, 207);
+	margin: 3px;
+	text-align: center;
+	padding-top: 5px;
+}
+.modal-body article aside:last-child span:hover {
+	box-shadow: 2px 2px 3px #555;
+	cursor: pointer;
+}
+.modal-body > aside {
+	width: 100%;
+}
+.modal-body > aside div  {
+	width: 60%;
+}
+button {
+	float: right;
+}
+.modal-body aside img {
+	display: block;
+	float: left;
+	height: 100px;
+}
+.modal-body article aside p:first-child {
+	float: left;
+	color: rgb(99,99,99);
+}
+.modal-body article aside p:last-child {
+	float: right;
+	background-color: rgb(240,240,240);
+	padding: 15px;
+	font-size: 48px;
+	color: black;
+}
+.modal-body article aside p:last-child span {
+	font-size: 24px;
+	position: relative;
+	bottom: 20px;
+}
+.modal-body article h2 {
+	font-size: 30px;
+	margin-top: 30px;
+}
+.modal-body article hr {
+	margin: 10px 0 5px;
+}
+table  {
+	width: 380px;
+	margin-top: 30px;
+	
+}
+table tr {
+	border-bottom: 1px solid rgb(227,227,227);
+	
+}
+table tr td:first-child {
+	float: left;
+	font-size: 16px;
+	padding: 3px;
+}
+table tr td:nth-child(2) {
+	float: right;
+	font-size: 16px;
+}
 
 
+.modal-body aside {
+	float: none;
+	clear: both;
+	width: 100%;
+	height: 50px;
+}
 
 
