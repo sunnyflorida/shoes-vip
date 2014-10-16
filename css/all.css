@@ -18,17 +18,14 @@ body {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	padding: 0 0 20px;
+	/*padding: 0 0 20px;*/
 }
 .center {
 	min-width: 360px;
 	max-width: 1100px;
 	margin: 0 auto;
 }
-.clear {
-	float: none;
-	clear: both;
-}
+
 
 /* Header
 -----------------------------------------------------------------------------*/
@@ -131,11 +128,7 @@ body {
 	width: 100%;
 	background-color: rgb(85, 85, 85);
 	border-radius: 0;
-	height: 50px;
-	box-sizing: padding-box;
-	border-bottom: 3px solid rgb(85, 85, 85);
 }
-
 .wrapper nav .navbar-collapse ul li {
 	padding: 0;
 	font: 16px Calibri, Arial, sans-serif;
@@ -146,17 +139,24 @@ body {
 .dropdown {
 	color: rgb(230, 230, 230);
 }
+.dropdown-menu {
+	padding: 0;
+}
+.dropdown-toggle {
+	padding-bottom: 0;
+}
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+	border-color: inherit;
+}
 .wrapper nav .navbar-collapse ul li a{
 	color: rgb(230, 230, 230);
-
 }
 .main .wrapper .nav_main,
 .kat .wrapper .nav_kat,
 .buy .wrapper .nav_buy,
 .about .wrapper .nav_about,
 .discounts .wrapper .nav_about,
-.news .wrapper .nav_news,
-.new_things .wrapper .nav_things {
+.news .wrapper .nav_news {
 	border-bottom: 3px solid rgb(255, 255, 255);
 	background-color: rgb(85, 85, 85);
 }
@@ -166,12 +166,22 @@ body {
 .wrapper .nav_about:hover,
 .wrapper .nav_news:hover {
 	border-bottom: 3px solid rgb(18, 171, 43);
-	color: rgb(230, 230, 230);
+}
+.wrapper .nav_main a:hover,
+.wrapper .nav_kat a:hover,
+.wrapper .nav_buy a:hover,
+.wrapper .nav_about:hover,
+.wrapper .nav_news a:hover,
+.wrapper .nav_things a:hover {
+	color: rgb(230, 230, 230) !important;
 }
 
 .wrapper > nav .nav_things a{
 	background-color: rgb(18, 171, 43);
 	border-bottom: 3px solid rgb(18, 171, 43);
+}
+.wrapper > nav .nav_things a:hover {
+	background-color: rgb(18, 171, 43);
 }
 .navbar:after,
 .navbar:before,

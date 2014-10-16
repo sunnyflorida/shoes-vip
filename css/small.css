@@ -102,17 +102,6 @@
 	display: inline-block;
 }
 
-/* Каталог товаров-------------------------------------------------------------------------------*/
-.kat section aside {
-	width: 100%;
-	float: none;
-	background-color: #999;
-}
-.catalog {
-	padding-left: 0;
-	width: 100%;
-	float: none;
-}
 
 /* Страница "Где купить" -------------------------------------------------------------------------------*/
 
@@ -145,5 +134,91 @@
 .brand_description article:last-child {
 	margin-bottom: 10px;
 	padding: 15px;
+}
+
+
+/* Каталог товаров-------------------------------------------------------------------------------*/
+.kat section aside:first-child {
+	width: 100%;
+	float: none;
+}
+.catalog {
+	padding-left: 0;
+	width: 100%;
+	float: none;
+}
+
+/*Модальное окно-------------------------------------------------------------------------------------------------------*/
+
+.modal-body {
+	width: 70%;
+	height: auto;
+	min-height: 50px;
+	min-height: 500px;
+	background-color: #fff;
+	margin: 0 auto;
+	border-radius: 30px;
+}
+.modal-body figure {
+	height: auto;
+	min-height: 50px;
+	width: 90%;
+	float: none;
+}
+.modal-body figure img{
+	width: 60%;
+	float: none;
+	margin: 0 auto;
+}
+.modal-body article {
+	height: auto;
+	width: 90%;
+	float: none;
+}
+.modal-body article aside {
+	width: 100%;
+	margin-top: 10px;
+}
+.modal-body > aside {
+	width: 100%;
+}
+.modal-body > aside div  {
+	display: none;
+}
+.modal-body > aside button {
+	display: block;
+	margin: 10px auto -40px;
+	float: none;
+	width: 100px;
+}
+.modal-body article aside p:first-child {
+	float: left;
+	color: rgb(99,99,99);
+}
+.modal-body article aside p:last-child {
+	float: right;
+	background-color: rgb(240,240,240);
+	padding: 15px;
+	font-size: 40px;
+	color: black;
+}
+.modal-body article aside p:last-child span {
+	font-size: 18px;
+	position: relative;
+	bottom: 20px;
+}
+.modal-body article h2 {
+	font-size: 30px;
+	margin-top: 30px;
+}
+.modal-body article hr {
+	margin: 10px 0 5px;
+}
+table  {
+	width: 100%;
+	margin: 30px auto 0 auto;
+}
+table tr {
+	border-bottom: 1px solid rgb(227,227,227);
 }
 
