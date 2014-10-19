@@ -77,8 +77,8 @@ body {
 
 
 
-/* Продвинутое меню --------------------------------------------------------------------*/
-.navbar {
+/* Меню на bootstrap--------------------------------------------------------------------*/
+/*.navbar {
 	width: 100%;
 	background-color: rgb(85, 85, 85);
 	border-radius: 0;
@@ -177,6 +177,159 @@ body {
 .navbar-nav:after{
 	clear: both;
 }
+*/
+/* Меню БЕЗ bootstrap--------------------------------------------------------------------*/
+.navbar {
+	width: 100%;
+	background-color: rgb(85, 85, 85);
+	min-height: 50px;
+	height: auto;
+}
+.dropdown,
+.dropdown-inside {
+	list-style-type: none;
+	padding: 0;
+}
+
+.dropdown .dropdown-top { 
+	position: relative; 
+}
+.nav_menu a,
+.dropdown .dropdown-top a {
+	padding: 15px 15px 0 15px;
+	display: block;
+	font: 16px Calibri, Arial, sans-serif;
+	text-transform: uppercase;
+	color: rgb(230, 230, 230);
+	text-decoration: none;
+}
+
+.nav_menu,
+.dropdown .dropdown-top {
+	display: inline-block;
+	float: left;
+	min-height: 50px;
+	height: auto;
+}
+ .dropdown-inside {
+	background-color: rgb(85, 85, 85);
+	display: none;
+	width: 150px;
+	height: 100px;
+	margin-top: 16px;
+	position: absolute;
+	z-index: 99999;
+ }
+ .nav_about {
+	width: 95px;
+	height: auto;
+ }
+ .nav_about .caret {
+	border: 5px solid rgba(230,230,230,0);
+	border-top: 5px solid rgb(230,230,230);
+	box-sizing: border-box;
+	display: inline-block;
+	height: 8px;
+	width: 8px;
+	float: right;
+	margin-top: 8px;
+ }
+.dropdown .dropdown-inside a{ 
+	padding: 7px 10px;
+}
+.dropdown .dropdown-inside a:hover { 
+	color: rgb(18, 171, 43);
+}
+.wrapper .nav_main,
+.wrapper .nav_kat,
+.wrapper .nav_buy,
+.wrapper .nav_about,
+.wrapper .nav_news {
+	border-bottom: 3px solid rgb(85, 85, 85);
+}
+.main .wrapper .nav_main,
+.kat .wrapper .nav_kat,
+.buy .wrapper .nav_buy,
+.about .wrapper .nav_about,
+.discounts .wrapper .nav_about,
+.brands_page .wrapper .nav_about,
+.news .wrapper .nav_news {
+	border-bottom-color: rgb(255, 255, 255);
+}
+.wrapper .nav_main:hover,
+.wrapper .nav_kat:hover,
+.wrapper .nav_buy:hover,
+.wrapper .nav_about:hover,
+.wrapper .nav_news:hover {
+	border-bottom-color: rgb(18, 171, 43);
+}
+.wrapper .nav_things {
+	background-color: rgb(18, 171, 43);
+}
+
+
+@media screen and (max-width: 800px) {
+	.navbar {
+		background-color: rgb(85, 85, 85);
+		min-height: 50px;
+		height: auto;
+		padding-bottom: 3px;
+	}
+	.dropdown .dropdown-top {
+		display: block;
+		float: none;
+		min-height: 40px;
+	}
+	.dropdown-inside {
+		width: 100%;
+		padding-left: 20px;
+		position: relative;
+		height: auto;
+	}
+	.dropdown-inside li {
+		height: 30px;
+	}
+	.wrapper .nav_menu {
+		display: block;
+		float: none;
+	}
+	.dropdown_body {
+		display: none;
+	}
+	 .nav_about {
+		width: 100%;
+		height: 200px;
+		display: block;
+	 }
+	.wrapper .nav_main:hover,
+	.wrapper .nav_kat:hover,
+	.wrapper .nav_buy:hover,
+	.wrapper .nav_about:hover,
+	.wrapper .nav_news:hover {
+		border-bottom-color: rgb(85, 85, 85);
+	}
+	.wrapper .nav_main a:hover,
+	.wrapper .nav_kat a:hover,
+	.wrapper .nav_buy a:hover,
+	.wrapper .nav_about a:hover,
+	.wrapper .nav_news a:hover {
+		color: rgb(18, 171, 43);
+	}
+	.main .wrapper .nav_main:hover,
+	.kat .wrapper .nav_kat:hover,
+	.buy .wrapper .nav_buy:hover,
+	.about .wrapper .nav_about:hover,
+	.discounts .wrapper .nav_about:hover,
+	.news .wrapper .nav_news:hover {
+		border-bottom-color: rgb(255, 255, 255);
+	}
+}
+
+
+
+
+
+
 
 
 
