@@ -1,9 +1,52 @@
-/* Большая фотография на главной странице------------------------------------------------------------- */
-.content article:first-child .item img {
-	margin: 20px auto;
-	width: 100%;
+/* Слайдер на главной странице------------------------------------------------------------- */
+#slider-wrap { /* Оболочка слайдера и кнопок */
+	width:100%; 
+}
+#slider { /* Оболочка слайдера */
+	width:100%;
+	height:600px;
+	overflow: hidden;
+	position:relative;
 	
 }
+.slide {
+	width:100%;
+	min-width: 100%;
+	width: 100% !important;
+	height:auto;
+	margin: 20px auto;
+}
+.slide img { /* Слайд */
+	width:100%;
+	height:auto;
+}
+.sli-links { 
+	display: none;
+}
+#prewbutton, #nextbutton{ /* Ссылка "Следующий" и "Педыдущий" */
+	display:block;
+	width:15px;
+	height:100%;
+	position:absolute;
+	top:0;
+	overflow:hidden;
+	text-indent:-1999px;
+	opacity:0.8;
+	z-index:3;
+	outline:none !important;}
+#prewbutton{
+	left:10px;
+	background:url(../ico/toleft.png) left center no-repeat;
+}
+#nextbutton{
+	right:10px;
+	background:url(../ico/toright.png) right center no-repeat;
+}
+	
+#prewbutton:hover, #nextbutton:hover {
+	opacity:1;
+}
+
 /* Маленькие фотки снизу ---------------------------------------------------------*/
 .small_photo figure {
 	width: 33%;
@@ -228,6 +271,7 @@
 /* Отдельная новость -------------------------------------------------------------------------------*/
 .separate_news {
 	margin: 40px 0;
+	padding: 15px;
 }
 .separate_news img{
 	float: none;
@@ -378,10 +422,10 @@
 	height: auto;
 }
 .catalog figure figcaption {
-	position: relative;
-	bottom: 0;
+	margin-top: 30px;
 	text-align: center;
 	font-size: 16px;
+	
 }
 .catalog figure figcaption p:last-child {
 	display: inline-block;
@@ -399,12 +443,14 @@
 	margin: 0 auto;
 	background-color: transparent;			
 }
-.modal-header button {
+.modal-header .close {
 	position: relative;
 	top: 20px;
 	z-index: 300;
 	left: 35px;
 	font-size: 16px;
+	font-family: Calibri, Arial, sans-serif;
+	font-weight: light !important;
 }
 .modal-body {
 	width: 60%;
@@ -469,6 +515,8 @@
 	font-size: 16px;
 	text-transform: uppercase;
 	border: none;
+	margin-top: 30px;
+	margin-right: 10px;
 }
 .modal-body aside img {
 	display: block;
@@ -490,7 +538,7 @@
 .modal-body article aside p:last-child span {
 	font-size: 24px;
 	position: relative;
-	bottom: 20px;
+	bottom: 15px;
 }
 .modal-body article h2 {
 	font-size: 30px;
