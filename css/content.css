@@ -24,7 +24,7 @@
 }
 #prewbutton, #nextbutton{ /* Ссылка "Следующий" и "Педыдущий" */
 	display:block;
-	width:15px;
+	width:40px;
 	height:100%;
 	position:absolute;
 	top:0;
@@ -34,11 +34,11 @@
 	z-index:3;
 	outline:none !important;}
 #prewbutton{
-	left:10px;
+	left: 0;
 	background:url(../ico/toleft.png) left center no-repeat;
 }
 #nextbutton{
-	right:10px;
+	right: 0;
 	background:url(../ico/toright.png) right center no-repeat;
 }
 	
@@ -129,13 +129,13 @@
 
 /* текст: Вся обувь, Бренды, Новости ------------------------------------------------------------ */
 .text_in_center{
-	margin: 10px 0;
+	margin: 10px 0 30px;
 }
 .text_in_center p {
 	font-size: 30px;
 	display: block;
 	position: relative;
-	top: 40px;
+	top: 25px;
 	background-color: rgb(255, 255, 255);
 	width: 200px;
 	height: 30px;
@@ -149,7 +149,6 @@
 .text_in_center hr {
 	color: rgb(227, 227, 227);
 	size: 2px;
-	margin-bottom: 35px;
 }
 .text_in_center:after {
 	clear: both;
@@ -487,7 +486,7 @@
 }
 
 /*Модальное окно-------------------------------------------------------------------------------------------------------*/
-
+/*
 .modal-header{
 	width: 50%;
 	margin: 0 auto;
@@ -501,37 +500,30 @@
 	font-size: 16px;
 	font-family: Calibri, Arial, sans-serif;
 	font-weight: light !important;
-}
-.modal-body {
-	width: 60%;
-	height: auto;
-	min-height: 500px;
-	background-color: #fff;
-	margin: 0 auto;
-	border-radius: 30px;
-}
-.modal-body figure {
+}*/
+
+#modal_form figure {
 	height: auto;
 	min-height: 300px;
 	width: 40%;
 	float: left;
 }
-.modal-body figure img{
+#modal_form figure img{
 	width: 90%;
 	float: none;
 	margin: 0 auto;
 }
-.modal-body article {
+#modal_form article {
 	height: auto;
 	min-height: 300px;
 	width: 50%;
 	float: right;
 }
-.modal-body article aside {
+#modal_form article aside {
 	width: 100%;
 	margin-top: 10px;
 }
-.modal-body article aside:last-child span {
+#modal_form article aside:last-child span {
 	display: inline-block;
 	background-color: rgb(246, 246, 246);
 	width: 30px;
@@ -542,21 +534,21 @@
 	text-align: center;
 	padding-top: 5px;
 }
-.modal-body article aside:last-child span:hover {
+#modal_form article aside:last-child span:hover {
 	box-shadow: 2px 2px 3px #555;
 	cursor: pointer;
 }
-.modal-body > aside {
+#modal_form > aside {
 	width: 100%;
 	height: auto;
 	min-height: 100px;
 	clear: both;
 	margin-top: 10px;
 }
-.modal-body > aside div  {
+#modal_form > aside div  {
 	width: 60%;
 }
-.modal-body button {
+#modal_form button {
 	float: right;
 	width: 100px;
 	height: 30px;
@@ -568,16 +560,16 @@
 	margin-top: 30px;
 	margin-right: 10px;
 }
-.modal-body aside img {
+#modal_form aside img {
 	display: block;
 	float: left;
 	height: 100px;
 }
-.modal-body article aside p:first-child {
+#modal_form article aside p:first-child {
 	float: left;
 	color: rgb(99,99,99);
 }
-.modal-body article aside p:last-child {
+#modal_form article aside p:last-child {
 	float: right;
 	background-color: rgb(240,240,240);
 	padding: 15px;
@@ -585,16 +577,16 @@
 	color: black;
 	margin-bottom: 20px;
 }
-.modal-body article aside p:last-child span {
+#modal_form article aside p:last-child span {
 	font-size: 24px;
 	position: relative;
 	bottom: 15px;
 }
-.modal-body article h2 {
+#modal_form article h2 {
 	font-size: 30px;
 	margin-top: 30px;
 }
-.modal-body article hr {
+#modal_form article hr {
 	margin: 10px 0 5px;
 }
 table   {
@@ -613,7 +605,7 @@ table tr td:nth-child(2) {
 	float: right;
 	font-size: 16px;
 }
-
+/*
 
 @media screen and (max-width: 1000px) {
 			.modal-body > aside {
@@ -631,4 +623,48 @@ table tr td:nth-child(2) {
 				width: 100px;
 			}
 }
+*/
 
+#modal_form {
+	width: 800px; 
+	height: 600px; /* Размеры должны быть фиксированы */
+	border-radius: 5px;
+	border: 1px #000 solid;
+	background: #fff;
+	position: fixed; /* чтобы окно было в видимой зоне в любом месте */
+	top: 45%; /* отступаем сверху 45%, остальные 5% подвинет скрипт */
+	left: 50%; /* половина экрана слева */
+	margin-top: -300px;
+	margin-left: -400px; /* тут вся магия центровки css, отступаем влево и вверх минус половину ширины и высоты соответственно =) */
+	display: none; /* в обычном состоянии окна не должно быть */
+	opacity: 0; /* полностью прозрачно для анимирования */
+	z-index: 5; /* окно должно быть наиболее большем слое */
+	padding: 20px 10px;
+
+}
+/* Кнопка закрыть для тех кто в танке) */
+#modal_form #modal_close {
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: block;
+}
+/* Подложка */
+#overlay {
+	z-index: 3; /* подложка должна быть выше слоев элементов сайта, но ниже слоя модального окна */
+	position: fixed; /* всегда перекрывает весь сайт */
+	background-color: #000; /* черная */
+	opacity: 0.6; /* но немного прозрачна */
+	width: 100%; 
+	height: 100%; /* размером во весь экран */
+	top: 0; 
+	left: 0; /* сверху и слева 0, обязательные свойства! */
+	cursor: pointer;
+	display: none;
+}
+#btn {
+	cursor: pointer;
+}
