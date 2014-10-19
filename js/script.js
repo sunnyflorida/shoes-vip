@@ -13,7 +13,7 @@ hwNeedLinks - включает или отключает показ ссылок "следующий - предыдущий". Знач
 */
 (function ($) {
 var hwSlideSpeed = 700;
-var hwTimeOut = 3000;
+var hwTimeOut = 2000;
 var hwNeedLinks = true;
 
 $(document).ready(function(e) {
@@ -75,3 +75,63 @@ var $linkArrow = $('<a id="prewbutton" href="#">&lt;</a><a id="nextbutton" href=
 	rotator();
 });
 })(jQuery);
+
+
+/* Filtr */
+
+$(document).ready(function(){
+	$(".button36").on("click", function(){
+		$("figure").hide();
+		$("figure").filter(".size36").show();
+	});
+});
+$(document).ready(function(){
+	$(".button37").on("click", function(){
+		$("figure").hide();
+		$("figure").filter(".size37").show();
+	});
+});
+$(document).ready(function(){
+	$(".button38").on("click", function(){
+		$("figure").hide();
+		$("figure").filter(".size38").show();
+	});
+});
+$(document).ready(function(){
+	$(".button39").on("click", function(){
+		$("figure").hide();
+		$("figure").filter(".size39").show();
+	});
+});
+$(document).ready(function(){
+	$(".button40").on("click", function(){
+		$("figure").hide();
+		$("figure").filter(".size40").show();
+	});
+});
+
+
+$(document).ready(function(){
+	$(".button_skin").on("click", function(){
+		$("figure").hide();
+		$("figure").filter(".skin").show();
+	});
+});
+$(document).ready(function(){
+	$(".button_not_skin").on("click", function(){
+		$("figure").hide();
+		$("figure").filter(".not_skin").show();
+	});
+});
+$(document).ready(function(){
+	$(".reset").on("click", function(){
+		$("figure").show();
+	});
+});
+
+
+
+
+
+
+

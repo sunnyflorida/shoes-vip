@@ -7,7 +7,6 @@
 	height:600px;
 	overflow: hidden;
 	position:relative;
-	
 }
 .slide {
 	width:100%;
@@ -54,6 +53,17 @@
 	padding: 5px;
 	margin-bottom: -50px;
 }
+.small_photo figure:first-child {
+	padding-left: 0;
+}
+.small_photo figure:nth-child(2) {
+	margin-left: 5px;
+}
+.small_photo figure:last-child {
+	padding-right: 0;
+	float: right;
+}
+
 .small_photo figure img {
 	width: 100%;
 }
@@ -154,8 +164,8 @@
 .products_types figure {
 	background: url(../ico/intop.png) top center no-repeat;
 	background-color: rgb(255, 255, 255);
-	width: 220px;
-	height: 300px;
+	width: 230px;
+	height: 310px;
 	float: left;
 	margin: 20px;
 }
@@ -172,7 +182,8 @@
 	display: block;
 	margin: 0 auto;
 	text-align: center;
-	width: 80px;
+	width: auto;
+	text-transform: uppercase;
 }
 .products_types figure hr {
 	width: 170px;
@@ -418,11 +429,12 @@
 	margin: 0 auto;
 	max-width: 90%;
 	width: auto;
-	max-height: 90%;
+	max-height: 75%;
 	height: auto;
 }
 .catalog figure figcaption {
-	margin-top: 30px;
+	position: relative;
+	bottom: 0;
 	text-align: center;
 	font-size: 16px;
 	
@@ -434,6 +446,44 @@
 	padding: 5px 20px;
 	border-radius: 15px;
 	margin-top: 5px;
+}
+/*Какое-то подобие фильтра-------------------------------------------------------------------------------------------------------*/
+
+.kat section > aside p {
+	background-color: rgb(238,238,238);
+	height: 40px;
+	display: block;
+	font-size: 20px;
+	padding: 10px 0 0 15px;
+}
+.kat section > aside div {
+	background-color: rgb(248,248,248);
+	height: auto;
+	padding: 15px;
+	display: block;
+}
+
+.kat section > aside div button {
+	margin: 4px;
+	background-color: rgb(255,255,255);
+	border: 1px solid rgb(207,207,207);
+	height: 30px;
+	width: 30px;
+	font-size: 14px;
+}
+.kat section > aside div:nth-child(4) button {
+	width: 60px;
+}
+.kat section > aside div:last-child {
+	background-color: rgb(188,188,188);
+}
+.kat section > aside div:last-child button {
+	width: 150px;
+	display: block;
+	margin: 0 auto;
+}
+.kat section > aside div button:hover {
+	box-shadow: 0 0 5px #333;
 }
 
 /*Модальное окно-------------------------------------------------------------------------------------------------------*/
