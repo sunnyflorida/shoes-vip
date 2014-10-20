@@ -26,11 +26,21 @@ body {
 /* Header
 -----------------------------------------------------------------------------*/
 .header {
-	height: 50px;
+	height: auto;
+	min-height: 50px;
 	background: rgb(238, 238, 238);
 }
+.header:after,
+.header:before { 
+	content: "";
+	display: table;
+}
+.header:after{
+	clear: both;
+}
 .header .center div:first-child {
-	max-width: 400px;
+	width: auto;
+	min-width: 400px;
 	height: 50px;
 	float: left;
 	display: block;
@@ -38,7 +48,6 @@ body {
 .header .center div:first-child p {
 	color: rgb(118, 118, 118);
 	float: left;
-	font-family: Calibri;
 	font-size: 16px;
 	display: inline-block;
 	height: 30px;
@@ -55,10 +64,10 @@ body {
 .header .center div:last-child {
 	height: 50px;
 	width: 300px;
+	min-width: 300px;
 	float: right;
 	display: block;
 }
-
 .header .center div:last-child p {
 	color: rgb(118, 118, 118);
 	display: inline-block;
@@ -66,18 +75,88 @@ body {
 	float: left;
 	margin: 15px 5px 0 5px;;
 }
-.header .center div:last-child img{
+.header .center div:last-child > img{
 	float: left;
 	margin: 20px 0 0 0;
 }
-.header .center div:last-child img:last-child {
+.header .center div:last-child >a img {
 	float: right;
-	margin: 15px 0 0 0;
+	margin: 10px 0 0 0;
+}
+
+
+@media screen and (max-width: 715px) {
+	.header .center div:first-child {
+		float: none;
+	}	
+
+	.header .center div:last-child {
+		float: none;
+		width: 300px;
+		min-width: 300px;
+		margin-bottom: 10px;
+	}
 }
 
 
 
-/* ÃÂÌ˛ Ì‡ bootstrap--------------------------------------------------------------------*/
+/*
+
+
+
+
+ {
+	.header .center div:first-child {
+	float: none;
+	width: 95%;
+	margin: 0 auto;
+}
+.header .center div:last-child {
+	width: 400px;
+	min-width: 300px;	
+	float: none;
+	margin: 0 auto;
+}
+.header .center:after,
+.header .center:before {
+	content: "";
+	display: table;
+}
+.header .center:after {
+	clear: both;
+}
+.header .center {
+	height: 100px;
+	background: rgb(238, 238, 238);
+}
+
+}
+
+@media screen and (max-width: 460px) {
+
+	.header .center div:first-child {
+	float: none;
+	width: 90%;
+	margin: 0 auto;
+}
+.header .center div:last-child {
+	width: 90%;
+	float: none;
+	margin: 0 auto;
+}
+.header .center div:first-child img {
+	height: 45px;
+}
+
+.header .center {
+	height: 100px;
+	background: rgb(238, 238, 238);
+}
+}
+
+
+
+/* √å√•√≠√æ √≠√† bootstrap--------------------------------------------------------------------*/
 /*.navbar {
 	width: 100%;
 	background-color: rgb(85, 85, 85);
@@ -178,7 +257,7 @@ body {
 	clear: both;
 }
 */
-/* ÃÂÌ˛ ¡≈« bootstrap--------------------------------------------------------------------*/
+/* √å√•√≠√æ √Å√Ö√á bootstrap--------------------------------------------------------------------*/
 .navbar {
 	width: 100%;
 	background-color: rgb(85, 85, 85);
@@ -220,7 +299,7 @@ body {
 	position: absolute;
 	z-index: 99999;
  }
- .nav_about {
+ .navbar .nav_about {
 	width: 95px;
 	height: auto;
  }
@@ -296,11 +375,13 @@ body {
 	.dropdown_body {
 		display: none;
 	}
-	 .nav_about {
-		width: 100%;
+	.nav_menu .nav_about {
 		height: 200px;
 		display: block;
 	 }
+	.navbar .nav_about {
+		width: 100%;
+	}
 	.wrapper .nav_main:hover,
 	.wrapper .nav_kat:hover,
 	.wrapper .nav_buy:hover,
@@ -337,11 +418,23 @@ body {
 -----------------------------------------------------------------------------*/
 .footer {
 	background-color: rgb(56, 56, 56);
+	height: auto;
 	min-height: 90px;
 }
 .footer_wrapper {
 	float: left;
 	min-height: 90px;
+	height: auto;
+	width: auto;
+	min-width: 590px;	
+}
+.footer:after,
+.footer:before {   /*–£–±–∏—Ä–∞–µ—Ç –±–µ–ª—ã–π —Ñ–æ–Ω –ø–æ–¥ —Ñ—É—Ç–µ—Ä–æ–º, –Ω–∞ –≤—Å—è–∫–∏–π —Å–ª—É—á–∞–π */
+	content: "";
+	display: table;
+}
+.footer:after{
+	clear: both;
 }
 .footer_wrapper aside {
 	display: block;
@@ -353,9 +446,8 @@ body {
 .footer_wrapper aside:first-child {
 	background-color: rgb(26, 26, 26);
 	height: 40px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
-
 .footer_wrapper aside:first-child a {
 	color: rgb(197, 197, 197);
 	font-size: 14px;
@@ -372,33 +464,37 @@ body {
 .footer .footer_wrapper aside:last-child ul li:first-child a {
 	border-left: none;
 }
-.fb {
+
+
+
+.phone_number {
 	float: right;
-	width: 40px;
-	padding-top: 30px;
-	height: 90px;
+	min-height: 90px;
+	height: auto;
+	width: auto;
+	min-width: 300px;
 }
-.footer_num {
-	width: 160px;	
-	float: right;
-	padding-top: 35px;
-	height: 90px;
-	margin-right: 5%;
+.phone_number div:first-child {
+	float: left;
+	width: auto;
+	min-width: 200px;
+	padding: 30px 0 0 0;
 }
-.footer_num p {
+.phone_number div:first-child p {
 	color: rgb(238, 238, 238);
-	font-size: 16px;
 	display: inline-block;
+	font-size: 18px;
+	float: left;
 }
-.footer_num img {
+.phone_number div:first-child img {
+	display: inline-block;
 	float: right;
-	padding-top: 5px;
+	padding-top: 3px;
 }
-
-
-
-/* Õ‡‚Ë„‡ˆËˇ ‚ ÙÛÚÂÂ
------------------------------------------------------------------------------*/
+.phone_number div:last-child {
+	float: right;
+	padding: 25px 0 0 0;
+}
 
 .main .footer_wrapper .nav_main a,
 .kat .footer_wrapper .nav_kat a,
@@ -423,6 +519,67 @@ body {
 	color: rgb(211,46,46);
 	text-decoration: none;
 }
+@media screen and (max-width: 930px) {
+	
+	.phone_number div:first-child p {
+		font-size: 14px;
+		
+	}
+	.phone_number {
+		width: auto;
+		min-width: 200px;
+	}
+	.phone_number div:first-child {
+		width: auto;
+		min-width: 150px;
+	}
+}
+@media screen and (max-width: 820px) {
+	.footer_wrapper {
+		float: none;
+		width: 100%;	
+	}
+	.phone_number {
+		width: 60%;
+		margin: 0 auto;
+		float: left;
+		height: 50px;
+		min-height: 50px;
+		margin-left: 20px;
+	}
+	.phone_number div:first-child {
+		padding-top: 10px;
+	}
+	.phone_number div:last-child {
+		padding-top: 10px;
+	}
+}
+
+@media screen and (max-width: 608px) {
+	.footer_wrapper aside:first-child {
+		background-color: rgb(26, 26, 26);
+		height: 60px;
+		margin-bottom: 10px;
+	}
+	.footer_wrapper {
+		min-width: 360px;	
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

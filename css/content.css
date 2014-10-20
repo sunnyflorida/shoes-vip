@@ -1,10 +1,10 @@
-/* Слайдер на главной странице------------------------------------------------------------- */
-#slider-wrap { /* Оболочка слайдера и кнопок */
+/* Г‘Г«Г Г©Г¤ГҐГ° Г­Г  ГЈГ«Г ГўГ­Г®Г© Г±ГІГ°Г Г­ГЁГ¶ГҐ------------------------------------------------------------- */
+#slider-wrap { /* ГЋГЎГ®Г«Г®Г·ГЄГ  Г±Г«Г Г©Г¤ГҐГ°Г  ГЁ ГЄГ­Г®ГЇГ®ГЄ */
 	width:100%; 
 }
-#slider { /* Оболочка слайдера */
+#slider { /* ГЋГЎГ®Г«Г®Г·ГЄГ  Г±Г«Г Г©Г¤ГҐГ°Г  */
 	width:100%;
-	height:600px;
+	height:500px;
 	overflow: hidden;
 	position:relative;
 }
@@ -15,14 +15,14 @@
 	height:auto;
 	margin: 20px auto;
 }
-.slide img { /* Слайд */
+.slide img { /* Г‘Г«Г Г©Г¤ */
 	width:100%;
 	height:auto;
 }
 .sli-links { 
 	display: none;
 }
-#prewbutton, #nextbutton{ /* Ссылка "Следующий" и "Педыдущий" */
+#prewbutton, #nextbutton{ /* Г‘Г±Г»Г«ГЄГ  "Г‘Г«ГҐГ¤ГіГѕГ№ГЁГ©" ГЁ "ГЏГҐГ¤Г»Г¤ГіГ№ГЁГ©" */
 	display:block;
 	width:40px;
 	height:100%;
@@ -46,12 +46,35 @@
 	opacity:1;
 }
 
-/* Маленькие фотки снизу ---------------------------------------------------------*/
+@media screen and (max-width: 850px) {
+	#slider {
+		width:100%;
+		height:400px;
+	}
+
+}
+@media screen and (max-width: 700px) {
+	#slider {
+		height:300px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#slider-wrap {
+		display: none;
+	}
+
+}
+
+
+/* РњР°Р»РµРЅСЊРєРёРµ С„РѕС‚РєРё СЃРЅРёР·Сѓ СЃР»Р°Р№РґРµСЂР° ---------------------------------------------------------*/
+
 .small_photo figure {
 	width: 33%;
 	float: left;
 	padding: 5px;
 	margin-bottom: -50px;
+	display: block;
 }
 .small_photo figure:first-child {
 	padding-left: 0;
@@ -63,7 +86,6 @@
 	padding-right: 0;
 	float: right;
 }
-
 .small_photo figure img {
 	width: 100%;
 }
@@ -125,9 +147,66 @@
 	box-shadow: 0 0 5px 3px rgb(100,100,100);
 }
 
-	
 
-/* текст: Вся обувь, Бренды, Новости ------------------------------------------------------------ */
+
+
+@media screen and (max-width: 740px) {
+.small_photo figure {
+	width: 70%;
+	float: none;
+	padding: 5px;
+	margin: 0 auto;
+	margin-bottom: -50px;
+}
+.small_photo figure:first-child,
+.small_photo figure:nth-child(2),
+.small_photo figure:last-child {
+	float: none;
+}
+.small_photo figure:nth-child(2) {
+	margin-left: auto;
+}
+.small_photo figure figcaption {
+	padding: 10px auto;
+}
+.small_photo figure:nth-child(1) figcaption,
+.small_photo figure:nth-child(2) figcaption,
+.small_photo figure:nth-child(3) figcaption {
+	margin: 0 auto;
+	float: none;
+	width: 80%;
+	max-width: 80%;
+	height: 48px;
+	bottom: 120px;
+	border: 1px solid rgb(255, 255, 255); 
+	outline: 1px solid rgba(203, 84, 86, 0.9); 
+	text-align: center;
+}
+}
+
+
+@media screen and (max-width: 480px) {
+.small_photo figure figcaption a {
+	font-size: 14px;	
+}
+.small_photo figure {
+	width: 70%;
+	float: none;
+	padding: 5px;
+}
+.small_photo figure figcaption {
+	position: relative;
+	display: block;		
+}
+.small_photo figure:nth-child(1) figcaption,
+.small_photo figure:nth-child(2) figcaption,
+.small_photo figure:nth-child(3) figcaption {
+	margin: 0 auto;
+	float: none;
+	width: 200px;
+}
+}
+/* ГІГҐГЄГ±ГІ: Г‚Г±Гї Г®ГЎГіГўГј, ГЃГ°ГҐГ­Г¤Г», ГЌГ®ГўГ®Г±ГІГЁ ------------------------------------------------------------ */
 .text_in_center{
 	margin: 10px 0 30px;
 }
@@ -154,7 +233,7 @@
 	clear: both;
 }
 
-/* Виды обуви, картинки на главной странице--------------------------------------------------------------- */
+/* Р’РёРґС‹ РѕР±СѓРІРё, РєР°СЂС‚РёРЅРєРё РЅР° РіР»Р°РІРЅРѕР№ СЃС‚СЂР°РЅРёС†Рµ--------------------------------------------------------------- */
 .products_types {
 	background-color: rgb(240, 240, 240);
 	height: auto;
@@ -163,7 +242,7 @@
 .products_types figure {
 	background: url(../ico/intop.png) top center no-repeat;
 	background-color: rgb(255, 255, 255);
-	width: 230px;
+	width: 235px;
 	height: 310px;
 	float: left;
 	margin: 20px;
@@ -175,18 +254,22 @@
 	color: rgb(0, 0, 0);
 	font-size: 20px;
 	position: relative;
-	top: 30px;
+	top: 20px;
+	z-index: 2;
 	background-color: rgb(255, 255, 255);
-	z-index: 333;
 	display: block;
 	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 	width: auto;
+	max-width: 60%;
 	text-transform: uppercase;
 }
 .products_types figure hr {
 	width: 170px;
 	position: relative;
+	top: 5px;
 	color: rgb(227, 227, 227);
 }
 .products_types figure img {
@@ -198,20 +281,30 @@
 	clear: both;
 	content: "";
 }
-/* Исправляет баги с плавающей разметкой -------------------------------------------------------*/
 .products_types:after,
 .products_types:before {
 	content: "";
 	display: table;
 }
 
-/* Список брендов внизу страницы--------------------------------------------------------------------- */
+@media screen and (max-width: 560px) {
+	.products_types figure {
+		float: none;
+		margin: 10px auto;
+	}
+}
+
+
+
+
+/* Brands list. Bottom of the page--------------------------------------------------------------------- */
 .brands article img {
 	display: inline-block;
 	width: auto;
-	max-width: 13%;
+	max-width: 150px;
+	height: 55px;
 	float: left;
-	margin: 0 18px;
+	margin: 5px 15px;
 }
 .brands  {
 	margin-bottom: 20px;
@@ -228,7 +321,7 @@
 }
 
 
-/* Лента новостей -------------------------------------------------------------------------------*/
+/* Г‹ГҐГ­ГІГ  Г­Г®ГўГ®Г±ГІГҐГ© -------------------------------------------------------------------------------*/
 .news_list {
 	padding-right: 15px;
 	margin-bottom: 20px;
@@ -252,6 +345,7 @@
 }
 .news_list p {
 	font-size: 16px;
+	font-family: inherit;
 	text-align: justify;
 	color: rgb(66, 66, 66);
 }
@@ -278,7 +372,7 @@
 }
 
 
-/* Отдельная новость -------------------------------------------------------------------------------*/
+/* ГЋГІГ¤ГҐГ«ГјГ­Г Гї Г­Г®ГўГ®Г±ГІГј -------------------------------------------------------------------------------*/
 .separate_news {
 	margin: 40px 0;
 	padding: 15px;
@@ -303,10 +397,9 @@
 .separate_news p {
 	display: block;
 	float: left;
-	clear: both;
 	color: rgb(0, 0, 0);
 	margin: 10px 0;
-	font: 16px Calibri, Arial, sans-serif;
+	font-size: 16px;
 }
 .news .separate_news .border_paragraph {
 	background-color: rgb(248, 248, 248);
@@ -323,9 +416,31 @@
 .separate_news:after {
 	clear: both;
 }
+@media screen and (max-width: 760px) {
+	
+	.separate_news img{
+		width: 100%;
+	}
+	.separate_news h2 {
+		font-size: 34px;
+		line-height: 100%;
+	}
+	.separate_news {
+		padding: 10px;
+	}
+}
 
+@media screen and (max-width: 460px) {
+	.separate_news h2 {
+		font-size: 32px;
+	}
+	.separate_news {
+		padding: 10px;
+	}
 
-/* Описание брендов -------------------------------------------------------------------------------*/
+}
+
+/* ГЋГЇГЁГ±Г Г­ГЁГҐ ГЎГ°ГҐГ­Г¤Г®Гў -------------------------------------------------------------------------------*/
 .brand_description article:first-child img {
 	width: 140px;
 	height: 70px;
@@ -356,8 +471,15 @@
 	font-weight: bold;
 }
 
+/*Discounts -------------------------------------------------------------------------------------------------------*/
 
-/* Страница "Где купить" -------------------------------------------------------------------------------*/
+.discounts .content article img {
+	width: 100%;
+	height: auto;
+}
+
+
+/* Г‘ГІГ°Г Г­ГЁГ¶Г  "ГѓГ¤ГҐ ГЄГіГЇГЁГІГј" -------------------------------------------------------------------------------*/
 
 .where_to_buy {
 	height: auto;
@@ -392,35 +514,42 @@
 	width: 250px;
 	color: rgb(227,227,227);
 }
-		@media screen and (max-width: 1020px) {
-			.buy .wrapper figure { 
-				float: none;
-				margin: 5px auto;
-			}
-		}
-/* Каталог товаров-------------------------------------------------------------------------------*/
+		
 
-.kat section > aside:first-child {
-	width: 25%;
-	float: left;
-	min-height: 100%;
-	margin-top: 20px;
+
+@media screen and (max-width: 1020px) {
+	.buy .wrapper figure { 
+		float: none;
+		margin: 5px auto;
+	}
 }
+@media screen and (max-width: 500px) {
+
+	.where_to_buy figure {
+		width: 90%;
+		margin: 10px auto;
+	}
+}
+
+/* ГЉГ ГІГ Г«Г®ГЈ ГІГ®ГўГ Г°Г®Гў-------------------------------------------------------------------------------*/
+
 .catalog {
+	padding: 20px 10px;	
 	padding-left: 27%;
 	min-height: 100%;
 }
 .catalog a {
 	color:  inherit;
 }
-.catalog figure {
-	width: 190px;
-	height: auto;
+.catalog .open_modal figure {
+	width: 210px;
+	height: 300px;
 	min-height: 280px;
 	float: left;
-	margin-right: 20px;
+	margin: 10px 20px;
+	position: relative;
 }
-.catalog .btn figure:hover {
+.catalog figure:hover {
 	box-shadow: 0 0 10px 1px rgb(188,188,188);
 }
 .catalog figure img {
@@ -431,9 +560,9 @@
 	max-height: 75%;
 	height: auto;
 }
-.catalog figure figcaption {
-	position: relative;
-	bottom: 0;
+.kat .catalog figure figcaption {
+	position: absolute;
+	bottom: 2px;
 	text-align: center;
 	font-size: 16px;
 	
@@ -446,8 +575,16 @@
 	border-radius: 15px;
 	margin-top: 5px;
 }
-/*Какое-то подобие фильтра-------------------------------------------------------------------------------------------------------*/
 
+
+
+/*ГЉГ ГЄГ®ГҐ-ГІГ® ГЇГ®Г¤Г®ГЎГЁГҐ ГґГЁГ«ГјГІГ°Г -------------------------------------------------------------------------------------------------------*/
+.kat section > aside:first-child {
+	width: 25%;
+	float: left;
+	min-height: 100%;
+	margin-top: 20px;
+}
 .kat section > aside p {
 	background-color: rgb(238,238,238);
 	height: 40px;
@@ -469,6 +606,7 @@
 	height: 30px;
 	width: 30px;
 	font-size: 14px;
+	cursor: pointer;
 }
 .kat section > aside div:nth-child(4) button {
 	width: 60px;
@@ -485,45 +623,90 @@
 	box-shadow: 0 0 5px #333;
 }
 
-/*Модальное окно-------------------------------------------------------------------------------------------------------*/
-/*
-.modal-header{
-	width: 50%;
-	margin: 0 auto;
-	background-color: transparent;			
-}
-.modal-header .close {
-	position: relative;
-	top: 20px;
-	z-index: 300;
-	left: 35px;
-	font-size: 16px;
-	font-family: Calibri, Arial, sans-serif;
-	font-weight: light !important;
-}*/
 
-#modal_form figure {
+@media screen and (max-width: 850px) {
+	.catalog {
+		padding: 20px 10px;
+		float: none;
+		clear: both;
+	}
+	.kat section > aside:first-child {
+		width: 100%;
+		float: none;
+		min-height: auto;
+		margin-top: 20px;
+		clear: both;
+		display: block;
+	}
+}
+
+
+/*Modal window-------------------------------------------------------------------------------------------------------*/
+
+.modal_div {
+	width: 700px; 
+	height: 500px; /* Р Р°Р·РјРµСЂС‹ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ С„РёРєСЃРёСЂРѕРІР°РЅС‹ */
+	border-radius: 5px;
+	border: 3px #000 solid;
+	background: #fff;
+	position: fixed; /* С‡С‚РѕР±С‹ РѕРєРЅРѕ Р±С‹Р»Рѕ РІ РІРёРґРёРјРѕР№ Р·РѕРЅРµ РІ Р»СЋР±РѕРј РјРµСЃС‚Рµ */
+	top: 45%; /* РѕС‚СЃС‚СѓРїР°РµРј СЃРІРµСЂС…Сѓ 45%, РѕСЃС‚Р°Р»СЊРЅС‹Рµ 5% РїРѕРґРІРёРЅРµС‚ СЃРєСЂРёРїС‚ */
+	left: 50%; /* РїРѕР»РѕРІРёРЅР° СЌРєСЂР°РЅР° СЃР»РµРІР° */
+	margin-top: -250px;
+	margin-left: -350px; /* С‚СѓС‚ РІСЃСЏ РјР°РіРёСЏ С†РµРЅС‚СЂРѕРІРєРё css, РѕС‚СЃС‚СѓРїР°РµРј РІР»РµРІРѕ Рё РІРІРµСЂС… РјРёРЅСѓСЃ РїРѕР»РѕРІРёРЅСѓ С€РёСЂРёРЅС‹ Рё РІС‹СЃРѕС‚С‹ СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ =) */
+	display: none; /* РІ РѕР±С‹С‡РЅРѕРј СЃРѕСЃС‚РѕСЏРЅРёРё РѕРєРЅР° РЅРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ */
+	opacity: 0; /* РїРѕР»РЅРѕСЃС‚СЊСЋ РїСЂРѕР·СЂР°С‡РЅРѕ РґР»СЏ Р°РЅРёРјРёСЂРѕРІР°РЅРёСЏ */
+	z-index: 5; /* РѕРєРЅРѕ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РЅР°РёР±РѕР»РµРµ Р±РѕР»СЊС€РµРј СЃР»РѕРµ */
+	padding: 20px 10px;
+}
+/* РљРЅРѕРїРєР° Р·Р°РєСЂС‹С‚СЊ РґР»СЏ С‚РµС… РєС‚Рѕ РІ С‚Р°РЅРєРµ) */
+.modal_div #modal_close {
+	width: 60px;
+	height: 21px;
+	position: absolute;
+	top: 10px;
+	right: 30px;
+	cursor: pointer;
+	display: block;
+}
+/* РџРѕРґР»РѕР¶РєР° */
+#overlay {
+	z-index: 3; /* РїРѕРґР»РѕР¶РєР° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РІС‹С€Рµ СЃР»РѕРµРІ СЌР»РµРјРµРЅС‚РѕРІ СЃР°Р№С‚Р°, РЅРѕ РЅРёР¶Рµ СЃР»РѕСЏ РјРѕРґР°Р»СЊРЅРѕРіРѕ РѕРєРЅР° */
+	position: fixed; /* РІСЃРµРіРґР° РїРµСЂРµРєСЂС‹РІР°РµС‚ РІРµСЃСЊ СЃР°Р№С‚ */
+	background-color: #000; /* С‡РµСЂРЅР°СЏ */
+	opacity: 0.8; /* РЅРѕ РЅРµРјРЅРѕРіРѕ РїСЂРѕР·СЂР°С‡РЅР° */
+	width: 100%; 
+	height: 100%; /* СЂР°Р·РјРµСЂРѕРј РІРѕ РІРµСЃСЊ СЌРєСЂР°РЅ */
+	top: 0; 
+	left: 0; /* СЃРІРµСЂС…Сѓ Рё СЃР»РµРІР° 0, РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ СЃРІРѕР№СЃС‚РІР°! */
+	cursor: pointer;
+	display: none; /* РІ РѕР±С‹С‡РЅРѕРј СЃРѕСЃС‚РѕСЏРЅРёРё РµС‘ РЅРµС‚) */
+}
+
+
+/*
+.modal_div figure {
 	height: auto;
 	min-height: 300px;
 	width: 40%;
 	float: left;
 }
-#modal_form figure img{
+.modal_div figure img{
 	width: 90%;
 	float: none;
 	margin: 0 auto;
 }
-#modal_form article {
+.modal_div article {
 	height: auto;
 	min-height: 300px;
 	width: 50%;
 	float: right;
 }
-#modal_form article aside {
+.modal_div article aside {
 	width: 100%;
 	margin-top: 10px;
 }
-#modal_form article aside:last-child span {
+.modal_div article aside:last-child span {
 	display: inline-block;
 	background-color: rgb(246, 246, 246);
 	width: 30px;
@@ -534,21 +717,21 @@
 	text-align: center;
 	padding-top: 5px;
 }
-#modal_form article aside:last-child span:hover {
+.modal_div article aside:last-child span:hover {
 	box-shadow: 2px 2px 3px #555;
 	cursor: pointer;
 }
-#modal_form > aside {
+.modal_div > aside {
 	width: 100%;
 	height: auto;
 	min-height: 100px;
 	clear: both;
 	margin-top: 10px;
 }
-#modal_form > aside div  {
+.modal_div > aside div  {
 	width: 60%;
 }
-#modal_form button {
+.modal_div button {
 	float: right;
 	width: 100px;
 	height: 30px;
@@ -560,16 +743,16 @@
 	margin-top: 30px;
 	margin-right: 10px;
 }
-#modal_form aside img {
+.modal_div aside img {
 	display: block;
 	float: left;
 	height: 100px;
 }
-#modal_form article aside p:first-child {
+.modal_div article aside p:first-child {
 	float: left;
 	color: rgb(99,99,99);
 }
-#modal_form article aside p:last-child {
+.modal_divarticle aside p:last-child {
 	float: right;
 	background-color: rgb(240,240,240);
 	padding: 15px;
@@ -577,16 +760,16 @@
 	color: black;
 	margin-bottom: 20px;
 }
-#modal_form article aside p:last-child span {
+.modal_div article aside p:last-child span {
 	font-size: 24px;
 	position: relative;
 	bottom: 15px;
 }
-#modal_form article h2 {
+.modal_div article h2 {
 	font-size: 30px;
 	margin-top: 30px;
 }
-#modal_form article hr {
+.modal_div article hr {
 	margin: 10px 0 5px;
 }
 table   {
@@ -625,46 +808,4 @@ table tr td:nth-child(2) {
 }
 */
 
-#modal_form {
-	width: 800px; 
-	height: 600px; /* Размеры должны быть фиксированы */
-	border-radius: 5px;
-	border: 1px #000 solid;
-	background: #fff;
-	position: fixed; /* чтобы окно было в видимой зоне в любом месте */
-	top: 45%; /* отступаем сверху 45%, остальные 5% подвинет скрипт */
-	left: 50%; /* половина экрана слева */
-	margin-top: -300px;
-	margin-left: -400px; /* тут вся магия центровки css, отступаем влево и вверх минус половину ширины и высоты соответственно =) */
-	display: none; /* в обычном состоянии окна не должно быть */
-	opacity: 0; /* полностью прозрачно для анимирования */
-	z-index: 5; /* окно должно быть наиболее большем слое */
-	padding: 20px 10px;
 
-}
-/* Кнопка закрыть для тех кто в танке) */
-#modal_form #modal_close {
-	width: 21px;
-	height: 21px;
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	cursor: pointer;
-	display: block;
-}
-/* Подложка */
-#overlay {
-	z-index: 3; /* подложка должна быть выше слоев элементов сайта, но ниже слоя модального окна */
-	position: fixed; /* всегда перекрывает весь сайт */
-	background-color: #000; /* черная */
-	opacity: 0.6; /* но немного прозрачна */
-	width: 100%; 
-	height: 100%; /* размером во весь экран */
-	top: 0; 
-	left: 0; /* сверху и слева 0, обязательные свойства! */
-	cursor: pointer;
-	display: none;
-}
-#btn {
-	cursor: pointer;
-}
