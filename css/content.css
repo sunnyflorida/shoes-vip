@@ -549,10 +549,10 @@
 	margin: 10px 20px;
 	position: relative;
 }
-.catalog figure:hover {
+.catalog .open_modal figure:hover {
 	box-shadow: 0 0 10px 1px rgb(188,188,188);
 }
-.catalog figure img {
+.catalog .open_modal figure img {
 	display: block;
 	margin: 0 auto;
 	max-width: 90%;
@@ -560,14 +560,15 @@
 	max-height: 75%;
 	height: auto;
 }
-.kat .catalog figure figcaption {
+.kat .catalog .open_modal figure figcaption {
 	position: absolute;
 	bottom: 2px;
 	text-align: center;
 	font-size: 16px;
-	
+	display: block;
+	margin-left: 15px;
 }
-.catalog figure figcaption p:last-child {
+.catalog .open_modal figure figcaption p:last-child {
 	display: inline-block;
 	background-color: rgb(240,240,240);
 	font-size: 18px;
@@ -578,7 +579,7 @@
 
 
 
-/*Êàêîå-òî ïîäîáèå ôèëüòðà-------------------------------------------------------------------------------------------------------*/
+/*Something like FILTER-------------------------------------------------------------------------------------------------------*/
 .kat section > aside:first-child {
 	width: 25%;
 	float: left;
@@ -647,7 +648,7 @@
 	width: 700px; 
 	height: 500px; /* Размеры должны быть фиксированы */
 	border-radius: 5px;
-	border: 3px #000 solid;
+	border: 1px solid #000 ;
 	background: #fff;
 	position: fixed; /* чтобы окно было в видимой зоне в любом месте */
 	top: 45%; /* отступаем сверху 45%, остальные 5% подвинет скрипт */
@@ -657,17 +658,27 @@
 	display: none; /* в обычном состоянии окна не должно быть */
 	opacity: 0; /* полностью прозрачно для анимирования */
 	z-index: 5; /* окно должно быть наиболее большем слое */
-	padding: 20px 10px;
+	padding: 10px;
 }
 /* Кнопка закрыть для тех кто в танке) */
 .modal_div #modal_close {
-	width: 60px;
+	width: 70px;
 	height: 21px;
 	position: absolute;
 	top: 10px;
 	right: 30px;
 	cursor: pointer;
 	display: block;
+}
+.modal_div #modal_close b {
+	display: inline-block;
+	background-color: rgb(240,240,240);
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	vertical-align: middle;
+	margin-top: -3px;
 }
 /* Подложка */
 #overlay {
@@ -682,31 +693,74 @@
 	cursor: pointer;
 	display: none; /* в обычном состоянии её нет) */
 }
-
-
-/*
-.modal_div figure {
-	height: auto;
-	min-height: 300px;
-	width: 40%;
+.modal_image {
+	width: 50%;
 	float: left;
+	height: 70%;
+	border-right: 1px solid rgb(227,227,227);
 }
-.modal_div figure img{
-	width: 90%;
-	float: none;
-	margin: 0 auto;
-}
-.modal_div article {
-	height: auto;
-	min-height: 300px;
+.modal_description {
 	width: 50%;
 	float: right;
+	height: 70%;
+	padding: 0 5px;
 }
-.modal_div article aside {
+.modal_image img {
+	width: 70%;
+	max-width: 70%;
+	height: auto;
+	max-height: 90%;
+	display: block;
+	margin: auto;
+}
+.modal_description h2 {
+	font-size: 30px;
+	border-bottom: 1px solid rgb(227,227,227);
+	padding-bottom: 10px;
+	padding-top: 15px;
+}
+.modal_description div {
+	height: 60px;
+}
+.modal_description div p:first-child {
+	float: left;
+	color: rgb(99,99,99);
+}
+.modal_description div p:last-child {
+	float: right;
+	background-color: rgb(240,240,240);
+	font-size: 43px;
+	color: black;
+	height: 50px;
+	display: block;
+	padding-top: 13px;
+}
+.modal_description div p:last-child sup{
+	font-size: 24px;
+	position: relative;
+	bottom: 20px;
+}
+.modal_description table   {
+	width: 100%;
+}
+.modal_description table tr {
+	border-bottom: 1px solid rgb(227,227,227);
+}
+.modal_description table tr td:first-child {
+	float: left;
+	font-size: 16px;
+	padding: 3px;
+}
+.modal_description table tr td:nth-child(2) {
+	float: right;
+	font-size: 16px;
+}
+
+.modal_description aside {
 	width: 100%;
 	margin-top: 10px;
 }
-.modal_div article aside:last-child span {
+.modal_description aside span {
 	display: inline-block;
 	background-color: rgb(246, 246, 246);
 	width: 30px;
@@ -717,21 +771,35 @@
 	text-align: center;
 	padding-top: 5px;
 }
-.modal_div article aside:last-child span:hover {
+.modal_description aside span:hover {
 	box-shadow: 2px 2px 3px #555;
 	cursor: pointer;
 }
-.modal_div > aside {
+.modal_description aside .present_size {
+	background-color: rgb(85, 85, 85);
+	color: rgb(255,255,255);
+}
+.modal_footer {
 	width: 100%;
-	height: auto;
-	min-height: 100px;
+	height: 30%;
 	clear: both;
-	margin-top: 10px;
+	border-top: 1px solid rgb(227,227,227);
 }
-.modal_div > aside div  {
-	width: 60%;
+.modal_footer div:first-child {
+	height: 100%;
+	width: 70%;
+	float: left;
 }
-.modal_div button {
+.modal_footer div:first-child img {
+	height: 100%;
+	max-height: 100%;
+}
+.modal_footer div:last-child {
+	height: 100%;
+	width: 30%;
+	float: right;
+}
+.modal_footer div:last-child button {
 	float: right;
 	width: 100px;
 	height: 30px;
@@ -740,72 +808,96 @@
 	font-size: 16px;
 	text-transform: uppercase;
 	border: none;
-	margin-top: 30px;
-	margin-right: 10px;
-}
-.modal_div aside img {
 	display: block;
-	float: left;
-	height: 100px;
+	cursor: pointer;
 }
-.modal_div article aside p:first-child {
-	float: left;
-	color: rgb(99,99,99);
-}
-.modal_divarticle aside p:last-child {
-	float: right;
-	background-color: rgb(240,240,240);
-	padding: 15px;
-	font-size: 43px;
-	color: black;
-	margin-bottom: 20px;
-}
-.modal_div article aside p:last-child span {
-	font-size: 24px;
-	position: relative;
-	bottom: 15px;
-}
-.modal_div article h2 {
-	font-size: 30px;
-	margin-top: 30px;
-}
-.modal_div article hr {
-	margin: 10px 0 5px;
-}
-table   {
-	width: 100%;
-}
-table tr {
-	border-bottom: 1px solid rgb(227,227,227);
-	
-}
-table tr td:first-child {
-	float: left;
-	font-size: 16px;
-	padding: 3px;
-}
-table tr td:nth-child(2) {
-	float: right;
-	font-size: 16px;
-}
-/*
 
-@media screen and (max-width: 1000px) {
-			.modal-body > aside {
-				width: 100%;
-				height: auto;
-			}
-			.modal-body > aside div  {
-				display: none;
-			}
-			.modal-body > aside button {
-				display: block;
-				margin: 20px auto;
-				float: none;
-				clear: both;
-				width: 100px;
-			}
+
+
+@media screen and (max-width: 720px) {
+	.modal_div {
+		width: 500px; 
+		height: 600px; /* Размеры должны быть фиксированы */
+		margin-top: -300px;
+		margin-left: -250px; /* тут вся магия центровки css, отступаем влево и вверх минус половину ширины и высоты соответственно =) */
+	}
+	.modal_image {
+		width: 100%;
+		float: none;
+		height: 250px;
+		max-height: 250px;
+		border-right: none;
+		border-bottom: 1px solid rgb(227,227,227);
+		clear: both;
+	}
+	.modal_image img {
+		width: auto;
+		max-width: 70%;
+		height: 90%;
+		max-height: 250px;
+		display: block;
+		margin: auto;
+	}
+	.modal_description {
+		width: 100%;
+		float: none;
+		height: auto;
+		min-height: 200px;
+		padding: 0 5px;
+		clear: both;
+	}
+	.modal_description h2 {
+	font-size: 20px;
+	}
+	.modal_description div p:last-child {
+		font-size: 20px;
+		height: 35px;
+	}
+	.modal_description div p:last-child sup{
+		font-size: 14px;
+		bottom: 10px;
+	}
+	.modal_footer {
+		width: 100%;
+		max-height: 50px;
+		clear: both;
+		border-top: 1px solid rgb(227,227,227);
+		clear: both;
+	}
+	.modal_footer div:first-child {
+		display: none;
+	}
+	.modal_footer div:last-child {
+		width: 100%;
+		float: none;
+	}
+	.modal_footer div:last-child button {
+		float: none;
+		width: 100px;
+		height: 30px;
+		margin: 20px auto 0;
+	}
+	.modal_footer div:first-child img {
+		overflow: hidden;
+	}
+	.modal_description table tr td:first-child,
+	.modal_description table tr td:nth-child(2){
+		font-size: 14px;
+	}
+	.modal_description aside span {
+		width: 23px;
+		height: 23px;
+		font-size: 12px;
+		padding-bottom: 5px;
+	}
 }
-*/
+@media screen and (max-width: 500px) {
+	.modal_div {
+		width: 340px; 
+		height: 600px; /* Размеры должны быть фиксированы */
+		margin-top: -300px;
+		margin-left: -160px; /* тут вся магия центровки css, отступаем влево и вверх минус половину ширины и высоты соответственно =) */
+	}
+}
 
 

@@ -477,7 +477,7 @@ body {
 .phone_number div:first-child {
 	float: left;
 	width: auto;
-	min-width: 200px;
+	min-width: 170px;
 	padding: 30px 0 0 0;
 }
 .phone_number div:first-child p {
@@ -518,6 +518,8 @@ body {
 .footer_wrapper .nav_brands a:hover{
 	color: rgb(211,46,46);
 	text-decoration: none;
+	-webkit-transition: color 2s;
+	transition: color 0.5s;
 }
 @media screen and (max-width: 930px) {
 	
